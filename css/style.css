@@ -1,6 +1,15 @@
 
 /*CHARACTER IMG SIZES*/
 .character-img-size {
-	width: 5rem;
+	width: auto;
 	height: 6rem;
 }
+
+.character-div {
+	padding-top: 3rem;
+}
+
+.row-img-padding {
+	padding-top: 1rem;
+}
+

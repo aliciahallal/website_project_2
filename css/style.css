@@ -13,3 +13,16 @@
 	padding-top: 1rem;
 }
 
+.table-header-span {
+	font-weight: normal;
+}
+
+.character-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.table-div {
+	margin-top: 2rem;
+}

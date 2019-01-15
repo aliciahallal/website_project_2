@@ -9,7 +9,7 @@ function confidantName(Name) {
 	// retrieves character arcana
 	let characterArcana = document.getElementById('character-arcana')
 	characterArcana.innerHTML = ""
-	characterArcana.innerHTML = confidant["confidant"][Name]["arcana"]
+	characterArcana.innerHTML = "Arcana: " + confidant["confidant"][Name]["arcana"]
 	// retrieves character requirements for rank 1
 	let characterRequirement = document.getElementById('character-requirement')
 	characterRequirement.innerHTML = ""
@@ -27,40 +27,62 @@ function confidantName(Name) {
 		let confidantChoice3 = confidant["confidant"][Name]["rank"][item]["choice_3"]["answer"]
 		let confidantChoice4 = confidant["confidant"][Name]["rank"][item]["choice_4"]["answer"]
 		let confidantChoice5 = confidant["confidant"][Name]["rank"][item]["choice_5"]["answer"]
+		// checks to see if data is empty, replaces empty data with "None" to better fit the table
+		if (confidantRequirement == "") {
+			confidantRequirement = "N/A"
+		}
+		if (confidantDate == "") {
+			confidantDate = "N/A"
+		}
+		if (confidantSkillUnlock == "") {
+			confidantSkillUnlock = "N/A"
+		}
+		if (confidantChoice1 == "") {
+			confidantChoice1 = "N/A"
+		}
+		if (confidantChoice2 == "") {
+			confidantChoice2 = "N/A"
+		}
+		if (confidantChoice3 == "") {
+			confidantChoice3 = "N/A"
+		}
+		if (confidantChoice4 == "") {
+			confidantChoice4 = "N/A"
+		}
+		if (confidantChoice5 == "") {
+			confidantChoice5 = "N/A"
+		}
+
 
 		let div = document.createElement('div')
 		div.innerHTML = `
-		  <table class="table table-hover">
+		  <table class="table table-danger">
 		  <thead>
 		    <tr>
-		      <th scope="col">Rank: ${item.replace(/[rank_]/gi, '')}</th>
-		      <th scope="col">Date: ${}</th>
-		      <th scope="col">Requirement: ${}</th>
-		      <th scope="col">Skill Unlock: ${}</th>
+		      <th scope="col">Rank: ${item.replace(/[rank_]/gi, '')}</span></th>
+		      <th scope="col">Date:<span class="table-header-span">  ${confidantDate}</span></th>
+		      <th scope="col">Requirement:<span class="table-header-span">  ${confidantRequirement}</span></th>
+		      <th scope="col">Skill Unlock: <span class="table-header-span"> ${confidantSkillUnlock}</span></th>
 		    </tr>
 		  </thead>
-		  <tbody id="character-tablebody">
-		  </tbody>
-		</table>
+		  </table>
 		  <table class="table table-hover">
-		  <thead>
-		    <tr>
-		      <th scope="col">Choice 1: ${}</th>
-		    </tr>
-		    <tr>
-		      <th scope="col">Choice 2: ${}</th>
-		    </tr>
-		    <tr>
-		      <th scope="col">Choice 3: ${}</th>
-		    </tr>
-		    <tr>
-		      <th scope="col">Choice 4: ${}</th>
-		    </tr>
-		    <tr>
-		      <th scope="col">Choice 5: ${}</th>
-		    </tr>
-		  </thead>
 		  <tbody id="character-tablebody">
+		    <tr>
+		      <td scope="col"><strong>Choice 1: </strong>${confidantChoice1}</td>
+		    </tr>
+		    <tr>
+		      <td scope="col"><strong>Choice 2: </strong> ${confidantChoice2}</td>
+		    </tr>
+		    <tr>
+		      <td scope="col"><strong>Choice 3: </strong> ${confidantChoice3}</td>
+		    </tr>
+		    <tr>
+		      <td scope="col"><strong>Choice 4: </strong> ${confidantChoice4}</td>
+		    </tr>
+		    <tr>
+		      <td scope="col"><strong>Choice 5: </strong> ${confidantChoice5}</td>
+		    </tr>
 		  </tbody>
 		</table> `
 		confidantTable.appendChild(div)

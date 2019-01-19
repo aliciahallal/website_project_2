@@ -13,6 +13,7 @@ function confidantName(Name) {
 	// retrieves character requirements for rank 1
 	let characterRequirement = document.getElementById('character-requirement')
 	characterRequirement.innerHTML = ""
+	document.getElementById('character-requirement-heading').innerHTML = "Start Event / Requirement"
 	characterRequirement.innerHTML = confidant["confidant"][Name]["rank"]["rank_1"]["requirement"]
 
 	// retrieves confidant data and loops over it
@@ -55,6 +56,12 @@ function confidantName(Name) {
 
 
 		let div = document.createElement('div')
+
+		// removes the rank 1 requirement if its the same as the start event requirement
+		if (confidantRequirement == confidant["confidant"][Name]["rank"]["rank_1"]["requirement"]) {
+			confidantRequirement = "Start Event"
+		}
+
 		div.innerHTML = `
 		  <table class="table table-danger">
 		  <thead>

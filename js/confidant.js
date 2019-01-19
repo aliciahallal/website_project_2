@@ -231,8 +231,8 @@ export let confidant = {
 		"Makoto Niijima": {
 			"rank": {
 				"rank_1": {
-					"date": "", "requirement": "Rank 3 (Scholarly) Knowledge is required.", "skills_unlock": "Shadow Calculus", "choice_1": {
-					"answer": "After clearing the Bank Palace dungeon in the story, find Makoto in front of the Student Council Office at school."},
+					"date": "", "requirement": "Rank 3 (Scholarly) Knowledge is required. After clearing the Bank Palace dungeon in the story, find Makoto in front of the Student Council Office at school.", "skills_unlock": "Shadow Calculus", "choice_1": {
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},
@@ -307,7 +307,7 @@ export let confidant = {
 		"Haru Okumura": {
 			"rank": {
 				"rank_1": {
-					"date": "10/30", "requirement": "find and chat to her on the school rooftop. On Sundays, she hangs out at the school gates.", "skills_unlock": "Cultivation", "choice_1": {
+					"date": "10/30", "requirement": "Find and chat to her on the school rooftop. On Sundays, she hangs out at the school gates.", "skills_unlock": "Cultivation", "choice_1": {
 					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
@@ -460,7 +460,7 @@ export let confidant = {
 			"rank": {
 				"rank_1": {
 					"date": "", "requirement": "As the story progresses, you'll unlock the ability to befriend Sojiro.", "skills_unlock": "", "choice_1": {
-					"answer": "part of the story your cooperation with Ryuji will begin."},
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},
@@ -536,7 +536,7 @@ export let confidant = {
 			"rank": {
 				"rank_1": {
 					"date": "4/15", "requirement": "Unlocks Automatically", "skills_unlock": "Baton Pass", "choice_1": {
-					"answer": "part of the story your cooperation with Ann will begin."},
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},
@@ -612,7 +612,7 @@ export let confidant = {
 			"rank": {
 				"rank_1": {
 					"date": "4/12", "requirement": "Unlocks automatically", "skills_unlock": "", "choice_1": {
-					"answer": "Part of the story your cooperation with Ryuji will begin."},
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},
@@ -839,11 +839,11 @@ export let confidant = {
 		"Chihaya Hifune": {
 			"rank": {
 				"rank_1": {
-					"date": "6/22", "requirement": "You can interact with Chihaya in  Shibuya", "skills_unlock": "Luck Reading", "choice_1": {
-					"answer": "Talk to her and ask for a prediction. This scene triggers an event back home."},
-					"choice_2": {"answer": "Go back to speak to her another day and purchase the Holy Stone for ¥100,000 Yen. This triggers another event once you get home."},
-					"choice_3": {"answer": "Go see Chihaya a third time about the Holy Stone. You'll get a mission for mementos: Ending the Boyfriend's Abuse."},
-					"choice_4": {"answer": 'Complete the Ending the Boyfriends Abuse mission in Mementos, then go back to see Chihaya. This triggers rank 1'},
+					"date": "6/22", "requirement": "You can interact with Chihaya in  Shibuya. Talk to her and ask for a prediction. This scene triggers an event back home. Go back to speak to her another day and purchase the Holy Stone for ¥100,000 Yen. This triggers another event once you get home. Go see Chihaya a third time about the Holy Stone. You'll get a mission for mementos: Ending the Boyfriend's Abuse. Complete the Ending the Boyfriends Abuse mission in Mementos, then go back to see Chihaya. This triggers rank 1", "skills_unlock": "Luck Reading", "choice_1": {
+					"answer": ""},
+					"choice_2": {"answer": ""},
+					"choice_3": {"answer": ""},
+					"choice_4": {"answer": ''},
 					"choice_5": {"answer": ''}},
 				"rank_2": {
 					"date": "", "requirement": "", "skills_unlock": "", "choice_1": {
@@ -1144,7 +1144,7 @@ export let confidant = {
 			"rank": {
 				"rank_1": {
 					"date": "5/24", "requirement": "Rank 3 (staunch) guts. Unlocked automatically", "skills_unlock": "Slack Off", "choice_1": {
-					"answer": "part of the story your cooperation with Ryuji will begin."},
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},
@@ -1220,7 +1220,7 @@ export let confidant = {
 			"rank": {
 				"rank_1": {
 					"date": "9/4", "requirement": "Mishima will text you details about a new side quest, Winners Don't Use Cheats", "skills_unlock": "Down Shot", "choice_1": {
-					"answer": "part of the story your cooperation with Ryuji will begin."},
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},
@@ -1296,7 +1296,7 @@ export let confidant = {
 			"rank": {
 				"rank_1": {
 					"date": "", "requirement": "Once you gain access to Shinjuku, visit the Crossroads bar and talk to her. You'll have met her earlier in the story at this point.", "skills_unlock": "Rumor-filled Scoop", "choice_1": {
-					"answer": "part of the story your cooperation with Ryuji will begin."},
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},
@@ -1372,7 +1372,7 @@ export let confidant = {
 			"rank": {
 				"rank_1": {
 					"date": "6/25", "requirement": "Rank 3 (suave) charm : visit Kanda Church and talk to the girl towards the front", "skills_unlock": "Koma Sabaki", "choice_1": {
-					"answer": "part of the story your cooperation with Ryuji will begin."},
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},
@@ -1523,8 +1523,8 @@ export let confidant = {
 		"Toranosuke Yoshida": {
 			"rank": {
 				"rank_1": {
-					"date": "5/6", "requirement": "Entirely optional and easy to miss for months. Yoshida can be found in Station Square", "skills_unlock": "", "choice_1": {
-					"answer": "You can apply to work there via the leaflets in the train station at Beef Bowl Shop. Work there twice and you'll meet Yoshida, starting off this confidant cooperation."},
+					"date": "5/6", "requirement": "Entirely optional and easy to miss for months. Yoshida can be found in Station Square. You can apply to work there via the leaflets in the train station at Beef Bowl Shop. Work there twice and you'll meet Yoshida, starting off this confidant cooperation.", "skills_unlock": "", "choice_1": {
+					"answer": ""},
 					"choice_2": {"answer": ""},
 					"choice_3": {"answer": ""},
 					"choice_4": {"answer": ''},

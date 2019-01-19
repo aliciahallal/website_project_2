@@ -90,8 +90,20 @@ function confidantName(Name) {
 	}	
 } 
 
+function hideCharacterImages() {
+	let characterDiv = document.getElementById("character-div")
+	console.log("makumba")
+	if (characterDiv.style.display == "") {
+		console.log("makumba2")
+		characterDiv.style.display = "none"
+		document.getElementById("character-img-hidden-btn").innerHTML = "Show Characters"
 
-
+	} else {
+		console.log("makumba3")
+		characterDiv.style.display = ""
+		document.getElementById("character-img-hidden-btn").innerHTML = "Hide Characters"
+	}
+}
 
 
 // Events: Character selection for character_generator.html
@@ -99,6 +111,11 @@ Object.keys(confidant["confidant"]).forEach(element => {
 	document.getElementById(element).addEventListener('click', () => {
 		confidantName(element)
 	})
+})
+
+// Events: Character hidden button/show button
+document.getElementById("character-img-hidden-btn").addEventListener('click', () => {
+	hideCharacterImages()
 })
 
 

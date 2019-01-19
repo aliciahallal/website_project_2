@@ -39,7 +39,8 @@
   <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-  <div class="container character-div">
+<div class="container" id="character-display-div"> 
+  <div class="container character-div" id= "character-div">
     <div class="row">
       <div class="col-sm-4 col-md-2">
         <button class="character-button btn btn-outline-danger" id="Joker">
@@ -159,14 +160,17 @@
       </div>
     </div>
   </div>
+    <button class="character-img-hidden-btn btn btn-outline-danger" id="character-img-hidden-btn">Hide Characters</button>
+</div>
+
 <div class="container table-div">
 <div class="card mb-3">
-  <h3 class="card-header" id="character-name">Confidant</h3>
+  <h3 class="card-header" id="character-name">Confidant Information Page</h3>
   <div class="card-body">
-    <h5 class="card-title" id="character-arcana">Arcana</h5>
+    <h5 class="card-title" id="character-arcana">Click a Confidant to find out their social choices.</h5>
   </div>
   <div class="alert alert-dismissible alert-light">
-  <h4 class="alert-heading">Confidant Start Event</h4>
+  <h4 class="alert-heading">Start Events displayed here.</h4>
   <p class="mb-0" id="character-requirement"></p>
 </div>
   <div id="confidant-table">

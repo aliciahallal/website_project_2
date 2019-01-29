@@ -1,34 +1,34 @@
 import { confidant } from './confidant.js';
 
-
-function confidantName(Name) {
+// ## CHARACTER.HTML PAGE ##
+// Creates the character choices table for the character.html page
+function confidantName(name) {
 	// retrieves character name
 	let characterName = document.getElementById('character-name')
 	characterName.innerHTML = ""
-	characterName.innerHTML = Name
+	characterName.innerHTML = name
 	// retrieves character arcana
 	let characterArcana = document.getElementById('character-arcana')
 	characterArcana.innerHTML = ""
-	characterArcana.innerHTML = "Arcana: " + confidant["confidant"][Name]["arcana"]
+	characterArcana.innerHTML = "Arcana: " + confidant["confidant"][name]["arcana"]
 	// retrieves character requirements for rank 1
 	let characterRequirement = document.getElementById('character-requirement')
 	characterRequirement.innerHTML = ""
 	document.getElementById('character-requirement-heading').innerHTML = "Start Event / Requirement"
-	characterRequirement.innerHTML = confidant["confidant"][Name]["rank"]["rank_1"]["requirement"]
-
+	characterRequirement.innerHTML = confidant["confidant"][name]["rank"]["rank_1"]["requirement"]
 	// retrieves confidant data and loops over it
 	let confidantTable = document.getElementById('confidant-table')
 	confidantTable.innerHTML = ""
-	for (let item in confidant["confidant"][Name]["rank"]) {
-		let confidantDate = confidant["confidant"][Name]["rank"][item]["date"]
-		let confidantRequirement = confidant["confidant"][Name]["rank"][item]["requirement"]
-		let confidantSkillUnlock = confidant["confidant"][Name]["rank"][item]["skills_unlock"]
-		let confidantChoice1 = confidant["confidant"][Name]["rank"][item]["choice_1"]["answer"]
-		let confidantChoice2 = confidant["confidant"][Name]["rank"][item]["choice_2"]["answer"]
-		let confidantChoice3 = confidant["confidant"][Name]["rank"][item]["choice_3"]["answer"]
-		let confidantChoice4 = confidant["confidant"][Name]["rank"][item]["choice_4"]["answer"]
-		let confidantChoice5 = confidant["confidant"][Name]["rank"][item]["choice_5"]["answer"]
-		// checks to see if data is empty, replaces empty data with "None" to better fit the table
+	for (let item in confidant["confidant"][name]["rank"]) {
+		let confidantDate = confidant["confidant"][name]["rank"][item]["date"]
+		let confidantRequirement = confidant["confidant"][name]["rank"][item]["requirement"]
+		let confidantSkillUnlock = confidant["confidant"][name]["rank"][item]["skills_unlock"]
+		let confidantChoice1 = confidant["confidant"][name]["rank"][item]["choice_1"]["answer"]
+		let confidantChoice2 = confidant["confidant"][name]["rank"][item]["choice_2"]["answer"]
+		let confidantChoice3 = confidant["confidant"][name]["rank"][item]["choice_3"]["answer"]
+		let confidantChoice4 = confidant["confidant"][name]["rank"][item]["choice_4"]["answer"]
+		let confidantChoice5 = confidant["confidant"][name]["rank"][item]["choice_5"]["answer"]
+		// checks to see if data is empty, replaces empty data with "N/A" to better fit the table
 		if (confidantRequirement == "") {
 			confidantRequirement = "N/A"
 		}
@@ -58,7 +58,7 @@ function confidantName(Name) {
 		let div = document.createElement('div')
 
 		// removes the rank 1 requirement if its the same as the start event requirement
-		if (confidantRequirement == confidant["confidant"][Name]["rank"]["rank_1"]["requirement"]) {
+		if (confidantRequirement == confidant["confidant"][name]["rank"]["rank_1"]["requirement"]) {
 			confidantRequirement = "Start Event"
 		}
 
@@ -95,35 +95,27 @@ function confidantName(Name) {
 		confidantTable.appendChild(div)
 
 	}	
-} 
-
+}
+// Hides the character images for the character.html page
 function hideCharacterImages() {
 	let characterDiv = document.getElementById("character-div")
-	console.log("makumba")
 	if (characterDiv.style.display == "") {
-		console.log("makumba2")
 		characterDiv.style.display = "none"
 		document.getElementById("character-img-hidden-btn").innerHTML = "Show Characters"
 
 	} else {
-		console.log("makumba3")
 		characterDiv.style.display = ""
 		document.getElementById("character-img-hidden-btn").innerHTML = "Hide Characters"
 	}
 }
-
-
-// Events: Character selection for character_generator.html
+// Events: Character selection 
 Object.keys(confidant["confidant"]).forEach(element => {
 	document.getElementById(element).addEventListener('click', () => {
 		confidantName(element)
 	})
 })
-
 // Events: Character hidden button/show button
 document.getElementById("character-img-hidden-btn").addEventListener('click', () => {
 	hideCharacterImages()
 })
-
-
 

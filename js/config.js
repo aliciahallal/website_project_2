@@ -38675,7 +38675,7 @@ export let info = {
           "persona_25": "Kusi Mitama",
           "persona_26": "Crystal Skull"
         },
-        "base_cost": "",
+        "base_cost": "01376",
         "skills": {
           "skill_1": {
             "skill_name": "Lunge",

@@ -2,31 +2,85 @@ import { info } from './config.js';
 
 // ## PERSONAS.HTML PAGE ##
 function generatePersonaTable(arcana) {
-	let personaTable = document.getElementById('persona-table')
-	personaTable.innerHTML = ""
+	let personaDiv = document.getElementById('persona-table')
+	personaDiv.innerHTML = ""
+	let personaTable = document.createElement('table')
+	personaTable.className= "table table-hover"
+
+		personaTable.innerHTML = `
+		  
+		  <thead class="table-danger">
+		    <tr>
+		      <th scope="col">Arcana</th>
+		      <th scope="col">Name</th>
+				<th scope="col">Level</th>
+					<th scope="col">Cost</th>
+		    </tr>
+		  </thead>
+
+		  <tbody id="character-tablebody">
+		 `
 
 	for (let persona in info["persona"][arcana]) {
-		let personaDiv = document.createElement('div')
+		let personaTR = document.createElement('tr')
 		let personaLevel = info["persona"][arcana][persona]["data"]["level"]
 		let personaCost = info["persona"][arcana][persona]["base_cost"]
 		while(personaCost.charAt(0) === '0'){
 			personaCost = personaCost.substr(1)
 		}
+		personaTR.innerHTML = `
 
-		personaDiv.innerHTML = `
-		  <table class="table table-danger">
-		  <thead>
+		      <td scope="col">${arcana}</td>
+		      <td scope="col">${persona}</td>
+		      <td scope="col">${personaLevel}</td>
+		      <td scope="col">${personaCost}</td>
+
+		    `
+		    personaTable.appendChild(personaTR)
+
+	}
+	personaDiv.appendChild(personaTable)
+}
+
+function allPersonaTable() {
+	let personaDiv = document.getElementById('persona-table')
+	personaDiv.innerHTML = ""
+	let personaTable = document.createElement('table')
+	personaTable.className= "table table-hover"
+
+		personaTable.innerHTML = `
+		  
+		  <thead class="table-danger">
 		    <tr>
-		      <th scope="col">Arcana: ${arcana}</span></th>
-		      <th scope="col">Name:<span class="table-header-span">  ${persona}</span></th>
-					<th scope="col">Level:<span class="table-header-span">  ${personaLevel}</span></th>
-					<th scope="col">Cost:<span class="table-header-span">  ¥${personaCost}</span></th>
+		      <th scope="col">Arcana</th>
+		      <th scope="col">Name</th>
+				<th scope="col">Level</th>
+					<th scope="col">Cost</th>
 		    </tr>
 		  </thead>
-		  </table>
+
+		  <tbody id="character-tablebody">
 		 `
-		personaTable.appendChild(personaDiv)
+	for (let arcana in info["persona"]) {
+		for (let persona in info["persona"][arcana]) {
+			let personaTR = document.createElement('tr')
+			let personaLevel = info["persona"][arcana][persona]["data"]["level"]
+			let personaCost = info["persona"][arcana][persona]["base_cost"]
+			while(personaCost.charAt(0) === '0'){
+				personaCost = personaCost.substr(1)
+			}
+			personaTR.innerHTML = `
+
+	      <td scope="col">${arcana}</td>
+	      <td scope="col">${persona}</td>
+	      <td scope="col">${personaLevel}</td>
+	      <td scope="col">${personaCost}</td>
+
+	    `
+	    personaTable.appendChild(personaTR)
+		}
 	}
+	personaDiv.appendChild(personaTable)
 }
 
 // Events: persona selection by arcana
@@ -35,3 +89,11 @@ Object.keys(info["persona"]).forEach(element => {
 		generatePersonaTable(element)
 	})
 }) 
+
+// document load
+document.addEventListener("DOMContentLoaded", allPersonaTable)
+
+// Events: document reset button
+document.getElementById("allPersona").addEventListener('click', () => {
+	allPersonaTable()
+})

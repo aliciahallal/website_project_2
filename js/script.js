@@ -63,7 +63,7 @@ function confidantName(name) {
 		}
 
 		div.innerHTML = `
-		  <table class="table table-danger">
+		  <table class="table table-warning">
 		  <thead>
 		    <tr>
 		      <th scope="col">Rank: ${item.replace(/[rank_]/gi, '')}</span></th>

@@ -31,7 +31,12 @@
 	margin-top: 1rem;
 }
 
+/*persona table css*/
 .persona-table {
 	margin-top: 1rem;
 }
-/* Hides / shows the image buttons for characters*/
+
+/*background colour for about page*/
+.about-background-colour {
+	background-color: #17a2b8;
+}

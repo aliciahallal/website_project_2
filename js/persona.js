@@ -1,6 +1,7 @@
 import { info } from './config.js';
 
 // ## PERSONAS.HTML PAGE ##
+// generates personas based on arcana clicked
 function generatePersonaTable(arcana) {
 	let personaDiv = document.getElementById('persona-table')
 	personaDiv.innerHTML = ""
@@ -9,7 +10,7 @@ function generatePersonaTable(arcana) {
 
 		personaTable.innerHTML = `
 		  
-		  <thead class="table-danger">
+		  <thead class="table-warning">
 		    <tr>
 		      <th scope="col">Arcana</th>
 		      <th scope="col">Name</th>
@@ -42,6 +43,7 @@ function generatePersonaTable(arcana) {
 	personaDiv.appendChild(personaTable)
 }
 
+// Generates all personas in one table, this is also called in the reset function
 function allPersonaTable() {
 	let personaDiv = document.getElementById('persona-table')
 	personaDiv.innerHTML = ""
@@ -50,7 +52,7 @@ function allPersonaTable() {
 
 		personaTable.innerHTML = `
 		  
-		  <thead class="table-danger">
+		  <thead class="table-warning">
 		    <tr>
 		      <th scope="col">Arcana</th>
 		      <th scope="col">Name</th>
